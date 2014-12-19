@@ -1,0 +1,12 @@
+%html
+  %body
+    %h3 ファイルアップロード
+    %form(method="post" enctype='multipart/form-data' action='/upload')
+      %input(type='file' name='file')
+      %br
+      %input(type='submit' value='アップロード')
+
+    %h3 ファイル一覧
+    - for list in @list
+      = list
+      %br
